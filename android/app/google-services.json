@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "383219891491",
+    "project_id": "cleanarchitecturetodo",
+    "storage_bucket": "cleanarchitecturetodo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383219891491:android:9405c63e17ba69badb6096",
+        "android_client_info": {
+          "package_name": "com.example.clean_architecture_todo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383219891491-2c2bqd9itnrtn95lm4rdko3kiqrolmts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOEZTZOHkMSDf_DrTFrfMWrdxFBTFYMhc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "383219891491-2c2bqd9itnrtn95lm4rdko3kiqrolmts.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
