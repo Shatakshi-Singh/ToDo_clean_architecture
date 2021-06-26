@@ -1,7 +1,7 @@
 import 'package:clean_architecture_todo/app/auth/domain/repository/auth-repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-abstract class AuthRepositoryImpl implements AuthRepository {
+class AuthRepositoryImpl implements AuthRepository {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
   @override
