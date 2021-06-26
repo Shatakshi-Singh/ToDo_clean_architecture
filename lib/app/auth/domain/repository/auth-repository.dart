@@ -10,7 +10,6 @@ abstract class AuthRepository {
     required String password,
   });
 
-  bool checkUserSignInStatus();
-
-  userSignOut() {} //to check user status and avoid signing in every time
+  bool
+      checkUserSignInStatus(); //to check user status and avoid signing in every time
 }
