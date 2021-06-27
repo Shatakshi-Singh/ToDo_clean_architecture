@@ -8,6 +8,7 @@ import 'app/auth/domain/usecase/check-user-sign-in-usecase.dart';
 import 'app/auth/domain/usecase/user-sign-out-usecase.dart';
 import 'app/auth/domain/usecase/user-sign-up-usecase.dart';
 import 'app/auth/presentation/sign-in/sign-in-presenter.dart';
+import 'app/auth/presentation/sign-up/sign-up-presenter.dart';
 
 final serviceLocator = GetIt.instance;
 Future<void> init() async {
@@ -23,6 +24,7 @@ Future<void> init() async {
 
   //presenter
   serviceLocator.registerFactory(() => SignInPresenter(serviceLocator()));
+  serviceLocator.registerFactory(() => SignUpPresenter(serviceLocator()));
 
   //repository
   serviceLocator
