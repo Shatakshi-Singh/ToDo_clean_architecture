@@ -5,7 +5,7 @@ class UseCaseObserver implements Observer<dynamic> {
   final Function _onError;
   final Function? onNextFunc; //'?' can be null
 
-  UseCaseObserver(this._onComplete, this._onError, this.onNextFunc);
+  UseCaseObserver(this._onComplete, this._onError, {this.onNextFunc});
 
   @override
   void onComplete() {

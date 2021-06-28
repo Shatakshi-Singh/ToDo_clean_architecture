@@ -1,7 +1,7 @@
 import 'package:clean_architecture_todo/core/presentation/state-machine.dart';
 
 class SignInStateMachine extends StateMachine<SignInState, SignInEvent> {
-  SignInStateMachine() : super(SignInInitState());
+  SignInStateMachine() : super(SignInInitState()); //Initialised state
 
   @override
   SignInState getStateOnEvent(SignInEvent event) {
