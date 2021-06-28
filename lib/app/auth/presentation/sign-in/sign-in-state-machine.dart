@@ -17,7 +17,7 @@ class SignInStateMachine extends StateMachine<SignInState, SignInEvent> {
         break;
       default:
         throw ('Invalid State: SignInStateMachine');
-    }
+    } //event ke according state manipulate
     return newState;
   }
 }
