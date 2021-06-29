@@ -14,7 +14,7 @@ class SignInController extends Controller {
       : _presenter = serviceLocator<SignInPresenter>(),
         _stateMachine = new SignInStateMachine(),
         _navigationService = serviceLocator<NavigationService>(),
-        super(); //TODO why super
+        super(); //constructor and super is used to contact clean arc Controller
 
   @override
   void initListeners() {
@@ -22,9 +22,12 @@ class SignInController extends Controller {
   }
 
   @override
-  void onInitState();
+  void onInitState() {
+    super.onInitState();
+  }
+
   @override
-  void onDispose() {
+  void onDisposed() {
     _presenter.dispose();
     super.onDisposed(); //cleaning
   }

@@ -9,7 +9,7 @@ class CheckUserSignInUseCase extends CompletableUseCase<void> {
   CheckUserSignInUseCase(this._repository);
 
   @override
-  Future<Stream<void>> buildUseCaseStream(void params) async {
+  Future<Stream<void>> buildUseCaseStream(params) async {
     final StreamController<void> streamController = StreamController();
     try {
       bool loginStatus = _repository.checkUserSignInStatus();
