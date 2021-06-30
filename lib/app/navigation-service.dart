@@ -14,7 +14,7 @@ class NavigationService {
     switch (settings.name) {
       case homePageRoute:
         return MaterialPageRoute(
-            builder: (_) => SignInView(),
+            builder: (_) => SignInView(), //TODO Change SignIn view
             settings: RouteSettings(name: NavigationService.homePageRoute));
       case signInPageRoute:
         return MaterialPageRoute(
