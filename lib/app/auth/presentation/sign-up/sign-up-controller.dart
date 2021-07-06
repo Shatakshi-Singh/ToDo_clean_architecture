@@ -56,7 +56,7 @@ class SignUpController extends Controller {
   }
 
   void navigateToSignIn() {
-    //TODO navigate to sign in
+    //navigate to sign in
     _navigationService.navigateTo(NavigationService.signInPageRoute,
         shouldReplace: false);
   }

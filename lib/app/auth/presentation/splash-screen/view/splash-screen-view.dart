@@ -14,11 +14,9 @@ class SplashScreenViewState
   SplashScreenViewState() : super(new SplashScreenController());
 
   @override
-  // TODO: implement desktopView
   Widget get desktopView => throw UnimplementedError();
 
   @override
-  // TODO: implement mobileView
   Widget get mobileView {
     return ControlledWidgetBuilder<SplashScreenController>(
         builder: (context, controller) {
@@ -37,10 +35,8 @@ class SplashScreenViewState
   }
 
   @override
-  // TODO: implement tabletView
   Widget get tabletView => throw UnimplementedError();
 
   @override
-  // TODO: implement watchView
   Widget get watchView => throw UnimplementedError();
 }

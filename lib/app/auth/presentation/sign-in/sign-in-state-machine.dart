@@ -5,7 +5,7 @@ class SignInStateMachine extends StateMachine<SignInState, SignInEvent> {
 
   @override
   SignInState getStateOnEvent(SignInEvent event) {
-    final eventType = event.runtimeType; //TODO shows the running event
+    final eventType = event.runtimeType; //shows the running event
     SignInState newState = getCurrentState();
     switch (eventType) {
       case SignInClickEvent:
@@ -13,7 +13,8 @@ class SignInStateMachine extends StateMachine<SignInState, SignInEvent> {
         break;
       case SignInErrorEvent:
         SignInErrorEvent errorEvent = event as SignInErrorEvent;
-        newState = SignInErrorState();
+        newState = SignInErrorState(
+            email: errorEvent.email, password: errorEvent.password);
         break;
       default:
         throw ('Invalid State: SignInStateMachine');
@@ -26,7 +27,12 @@ abstract class SignInState {} //2
 
 class SignInLoadingState extends SignInState {}
 
-class SignInErrorState extends SignInState {}
+class SignInErrorState extends SignInState {
+  final String email;
+  final String password;
+
+  SignInErrorState({required this.email, required this.password});
+}
 
 class SignInInitState extends SignInState {}
 
@@ -34,4 +40,9 @@ abstract class SignInEvent {} //1
 
 class SignInClickEvent extends SignInEvent {}
 
-class SignInErrorEvent extends SignInEvent {}
+class SignInErrorEvent extends SignInEvent {
+  final String email;
+  final String password;
+
+  SignInErrorEvent({required this.email, required this.password});
+}

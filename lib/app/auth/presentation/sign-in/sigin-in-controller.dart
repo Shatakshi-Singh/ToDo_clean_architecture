@@ -46,7 +46,8 @@ class SignInController extends Controller {
               shouldReplace: true); //OnComplete
         },
         (error) {
-          _stateMachine.onEvent(new SignInErrorEvent());
+          _stateMachine
+              .onEvent(new SignInErrorEvent(email: email, password: password));
           refreshUI(); //onError
         },
       ),

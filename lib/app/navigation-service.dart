@@ -1,4 +1,5 @@
 import 'package:clean_architecture_todo/app/auth/presentation/sign-in/view/sign-in-view.dart';
+import 'package:clean_architecture_todo/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,9 @@ class NavigationService {
     switch (settings.name) {
       case homePageRoute:
         return MaterialPageRoute(
-            builder: (_) => SignInView(), //TODO Change SignIn view
+            builder: (_) => MyHomePage(
+                  title: 'My home page',
+                ),
             settings: RouteSettings(name: NavigationService.homePageRoute));
       case signInPageRoute:
         return MaterialPageRoute(

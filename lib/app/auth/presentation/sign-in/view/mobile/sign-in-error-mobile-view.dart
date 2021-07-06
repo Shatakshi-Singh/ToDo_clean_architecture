@@ -15,12 +15,15 @@ class SignInErrorMobileView extends StatefulWidget {
 class _SignInErrorMobileViewState extends State<SignInErrorMobileView> {
   late TextEditingController _emailTextController;
   late TextEditingController _passwordTextController;
-  // late SignInErrorState _errorState;
+  late SignInErrorState _errorState;
 
   @override
   void initState() {
-    _emailTextController = new TextEditingController();
-    _passwordTextController = new TextEditingController();
+    _errorState =
+        widget.controller.getCurrentState() as SignInErrorState; //defining
+    _emailTextController = new TextEditingController(text: _errorState.email);
+    _passwordTextController =
+        new TextEditingController(text: _errorState.password);
     super.initState();
   }
 
