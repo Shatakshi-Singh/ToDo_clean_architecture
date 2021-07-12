@@ -18,7 +18,7 @@ class SignInController extends Controller {
 
   @override
   void initListeners() {
-    // TODO: implement initListeners
+    //implement initListeners
   }
 
   @override
@@ -46,7 +46,8 @@ class SignInController extends Controller {
               shouldReplace: true); //OnComplete
         },
         (error) {
-          _stateMachine.onEvent(new SignInErrorEvent());
+          _stateMachine
+              .onEvent(new SignInErrorEvent(email: email, password: password));
           refreshUI(); //onError
         },
       ),

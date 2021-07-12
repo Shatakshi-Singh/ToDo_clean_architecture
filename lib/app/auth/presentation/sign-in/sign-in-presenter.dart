@@ -8,7 +8,7 @@ class SignInPresenter extends Presenter {
 
   @override
   void dispose() {
-    _userSignInUseCase.dispose(); //TODO Kyu dispose
+    _userSignInUseCase.dispose(); //to reinitialize usecase
   }
 
   void userSignInStatus(UseCaseObserver observer,

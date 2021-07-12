@@ -18,7 +18,6 @@ class SignInViewState
             new SignInController()); //SignInviewState constructor passing base class SignInController
 
   @override
-  // TODO: implement desktopView
   Widget get desktopView => throw UnimplementedError();
 
   @override
@@ -43,10 +42,8 @@ class SignInViewState
   }
 
   @override
-  // TODO: implement tabletView
   Widget get tabletView => throw UnimplementedError();
 
   @override
-  // TODO: implement watchView
   Widget get watchView => throw UnimplementedError();
 }

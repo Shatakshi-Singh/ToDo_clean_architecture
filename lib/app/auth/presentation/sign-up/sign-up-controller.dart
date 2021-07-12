@@ -19,7 +19,7 @@ class SignUpController extends Controller {
 
   @override
   void initListeners() {
-    // TODO: implement initListeners
+    //implement initListeners
   }
   @override
   void onInitState() {
@@ -46,7 +46,8 @@ class SignUpController extends Controller {
               shouldReplace: true); //OnComplete
         },
         (error) {
-          _stateMachine.onEvent(new SignUpErrorEvent());
+          _stateMachine
+              .onEvent(new SignUpErrorEvent(email: email, password: password));
           refreshUI(); //onError
         },
       ),
@@ -56,7 +57,7 @@ class SignUpController extends Controller {
   }
 
   void navigateToSignIn() {
-    //TODO navigate to sign in
+    //navigate to sign in
     _navigationService.navigateTo(NavigationService.signInPageRoute,
         shouldReplace: false);
   }
