@@ -10,7 +10,7 @@ class SignInStateMachine extends StateMachine<SignInState, SignInEvent> {
     switch (eventType) {
       case SignInClickEvent:
         newState = SignInLoadingState();
-        break;
+        break; 
       case SignInErrorEvent:
         SignInErrorEvent errorEvent = event as SignInErrorEvent;
         newState = SignInErrorState(

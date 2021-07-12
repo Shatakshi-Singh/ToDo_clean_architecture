@@ -32,6 +32,7 @@ class _SignInContentBodyState extends State<SignInContentBody> {
         TextFormField(
           controller: widget.passwordTextController,
           decoration: InputDecoration(labelText: "Password"),
+          obscureText: true,
         ),
         TextButton(
           onPressed: () {

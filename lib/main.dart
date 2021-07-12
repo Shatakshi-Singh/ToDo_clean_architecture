@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       navigatorKey: di
           .serviceLocator<NavigationService>()
-          .navigatorKey, //TODO calling navigation service
+          .navigatorKey, //calling navigation service
       onGenerateRoute: NavigationService.generateRoute,
       home: App(), //firebase initialize
     );

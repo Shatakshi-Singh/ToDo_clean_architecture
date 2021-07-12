@@ -1,7 +1,8 @@
 import 'package:clean_architecture_todo/app/auth/presentation/splash-screen/splash-screen-controller.dart';
 import 'package:clean_architecture_todo/app/auth/presentation/splash-screen/splash-screen-state-machine.dart';
 import 'package:clean_architecture_todo/app/auth/presentation/splash-screen/view/widgets/splash-screen-widget.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart';
+
 import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
 
 class SplashScreenView extends View {

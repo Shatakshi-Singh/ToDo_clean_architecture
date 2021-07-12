@@ -18,7 +18,7 @@ class SplashScreenController extends Controller {
 
   @override
   void initListeners() {
-    // TODO: implement initListeners
+    //implement initListeners
   }
 
   @override

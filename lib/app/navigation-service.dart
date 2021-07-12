@@ -43,7 +43,7 @@ class NavigationService {
 
   Future navigateTo(String toRoute,
       {bool shouldReplace = false, Object? arguments}) async {
-    //TODO arguments
+    //arguments -to move from one screen to other
     if (shouldReplace) {
       return navigatorKey.currentState!
           .pushReplacementNamed(toRoute, arguments: arguments);
