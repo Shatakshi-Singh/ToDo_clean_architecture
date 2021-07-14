@@ -24,6 +24,12 @@ class _SignUpContentBodyState extends State<SignUpContentBody> {
       child: Column(
         children: [
           SizedBox(height: 100.0),
+          Icon(
+            Icons.app_registration_rounded,
+            color: Colors.cyan,
+            size: 40.0,
+          ),
+          SizedBox(height: 17.0),
           Text(
             'Sign Up',
             style: TextStyle(fontSize: 20),
@@ -66,7 +72,10 @@ class _SignUpContentBodyState extends State<SignUpContentBody> {
             ),
             obscureText: true,
           ),
-          TextButton(
+          SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(
             onPressed: () {
               if (widget.emailTextController.text.isNotEmpty &&
                   widget.passwordTextController.text.isNotEmpty) {
@@ -75,13 +84,32 @@ class _SignUpContentBodyState extends State<SignUpContentBody> {
                     password: widget.passwordTextController.text);
               }
             },
-            child: Text("Sign Up"),
+            child: Container(
+              alignment: Alignment.center,
+              width: 300.0,
+              padding: EdgeInsets.symmetric(vertical: 16.0),
+              child: Text(
+                'Sign Up',
+                style: TextStyle(fontSize: 16, color: Colors.white),
+              ),
+            ),
           ),
-          TextButton(
+          SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(
             onPressed: () {
               widget.controller.navigateToSignIn();
             },
-            child: Text("Go to Sign In"),
+            child: Container(
+              alignment: Alignment.center,
+              width: 300.0,
+              padding: EdgeInsets.symmetric(vertical: 16.0),
+              child: Text(
+                'Go to Sign In',
+                style: TextStyle(fontSize: 16, color: Colors.white),
+              ),
+            ),
           ),
         ],
       ),
