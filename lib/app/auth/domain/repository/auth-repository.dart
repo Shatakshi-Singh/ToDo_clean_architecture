@@ -11,5 +11,7 @@ abstract class AuthRepository {
   });
 
   bool
-      checkUserSignInStatus(); //to check user status and avoid signing in every time
+      checkUserSignInStatus();
+
+  addTodo({title, description}) {} //to check user status and avoid signing in every time
 }
